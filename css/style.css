@@ -1,59 +1,89 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 header {
+    background-color: #4F6928; /* Warna header yang diperbarui */
+    color: white;
     text-align: center;
+    padding: 20px;
 }
 
 header h1 {
-    color: #3A4D39;
+    margin: 0;
+    font-size: 24px; /* Ukuran font judul yang diperbarui */
+    font-weight: bold;
+}
+
+main {
     background-color: #ecf6eb;
+    padding: 20px;
 }
 
-header h4 {
-    margin-top: 32px;
-    color: #3A4D39;
-}
-
-header p {
-    margin-top: -10px;
-    font-size: x-small;
-    color: #739072;
-    margin-top: 20px;
-}
-
-.inputSection {
+.container {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-#squareSide {
-    margin-top: 10px;
-    outline: none;
+.content-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: #FAFAFA; /* Warna card yang diperbarui */
     border-radius: 8px;
-    border: solid #739072;
-    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 30px; /* Padding card yang diperbarui */
+    text-align: center;
+    flex: 1;
 }
 
-#squareSide:focus {
-    border: solid #3A4D39;
+.input-section {
+    margin-bottom: 20px;
 }
 
-button {
-    background-color: #739072;
+.buttons button {
+    background-color: #5C7F3C; /* Warna tombol yang diperbarui */
     color: white;
     border: none;
     border-radius: 8px;
     padding: 10px 20px;
     cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease-in-out; /* Efek hover yang diperbarui */
 }
 
-button:hover {
-    background-color: #4F6F52;
+.buttons button:hover {
+    background-color: #436530; /* Warna tombol saat dihover yang diperbarui */
 }
 
-button:active {
+.buttons button:disabled {
+    background-color: red;
+}
+
+.buttons button:active {
     background-color: #3A4D39;
-    transform: translateY(10px);
+    transform: translateY(2px);
+}
+
+/* Penyesuaian untuk responsif design */
+@media (max-width: 600px) {
+    .content-body {
+        flex-direction: column;
+    }
+
+    .card {
+        max-width: 100%; /* Sesuaikan dengan kebutuhan */
+    }
+}
+
+footer {
+    text-align: center;
+    font-weight: bold;
 }
